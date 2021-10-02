@@ -1,26 +1,30 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-void permu(string s, int i, int n){
-    static int count;
+void permu(string str, int i, int n)
+{
     int j;
-    if(i==n){
-        count++;
-        cout<<s<<endl;
+    if (i == n)
+    {
+        cout << str << endl;
     }
-    else{
-        for(j=i; j<=n; j++){
-            swap((s[i]), (s[j]));
-            permu(s, i+1, n);
-            swap((s[i]), (s[j]));
+    else
+    {
+        for (j = i; j <= n; j++)
+        {
+            swap((str[i]), (str[j]));
+            permu(str, i + 1, n);
+            swap((str[i]), (str[j]));
         }
     }
 }
 
-
-int main(){
-    string ch;
-    cin>>ch;
-    permu(ch, 0, ch.length()-1);
+int main()
+{
+    string str_original;
+    cout << "Enter a String: ";
+    cin >> str_original;
+    cout << "Entered string has following permutations: " << endl;
+    permu(str_original, 0, str_original.length() - 1);
     return 0;
 }

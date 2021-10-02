@@ -26,11 +26,11 @@ void createLinkedlist(int A[], int n){
 
 int sum(struct Node *p){
     int sum = 0;
-    while(p->next){
+    while(p){
         sum = sum + p->data;
         p=p->next;
     }
-    return sum+p->data;
+    return sum;
 }
 
 int main(){
