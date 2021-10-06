@@ -1,0 +1,4 @@
+From improving searching in linked list there are two methods, first one is transposition and second one is move to header
+
+In Linked List, we avoid movement of data, thus tranposition is not suitable.
+We prefer movement of nodes, there we will use the second method to improve searching in linked list, i.e. move to head.
