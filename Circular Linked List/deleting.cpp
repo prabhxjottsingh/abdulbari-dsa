@@ -65,6 +65,33 @@ void display(Node *p)
     cout << p->data << endl;
 }
 
+void Delete(int pos)
+{
+    if (pos != 1)
+    {
+        Node *p = head;
+        Node *q = NULL;
+        for (int i = 0; i < pos - 1; i++)
+        {
+            q = p;
+            p = p->next;
+        }
+        q->next = p->next;
+        delete p;
+    }
+    else
+    {
+        Node *p = head;
+        do
+        {
+            p = p->next;
+        } while (p->next != head);
+        p->next = head->next;
+        delete head;
+        head = p->next;
+    }
+}
+
 int main()
 {
     int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
@@ -73,5 +100,7 @@ int main()
     display(head);
     insert(2, 0);
     display(head);
+    Delete(1);
+    display(head);
     return 0;
-}
+};
