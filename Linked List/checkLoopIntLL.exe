@@ -1,0 +1,20 @@
+# 1 "C:\\Users\\Parneet\\Desktop\\abdulbari-dsa\\Linked List\\checkLoopIntLL.cpp"
+# 1 "C:\\Users\\Parneet\\Desktop\\abdulbari-dsa\\Linked List//"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "C:\\Users\\Parneet\\Desktop\\abdulbari-dsa\\Linked List\\checkLoopIntLL.cpp"
+
+
+bool checkLoop(Node *p)
+{
+    Node *walker = p;
+    Node *runner = p;
+    while ((runner->next != NULL) && (runner != NULL))
+    {
+        if (runner == walker)
+            return true;
+        runner = runner->next->next;
+        walker = walker->next;
+    }
+    return false;
+}
