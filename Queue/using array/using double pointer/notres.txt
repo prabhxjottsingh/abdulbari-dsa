@@ -1,0 +1,7 @@
+enqueue() -> taking constant time to insert an element in the queue with the help of rear pointer
+
+dequeue() -> taking constant time to delete an element from the queue with the help of front pointer
+
+front == rear -> condition for empty queue (if front is pointing before the element we want to delete)
+
+rear = size - 1 -> condition for full queue

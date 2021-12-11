@@ -1,0 +1,2 @@
+Time Taken for Insertion -> O(1) // constant, therefore there is no problem in inserting element in queue using array with the help of one pointer
+Time Taken for deletion -> O(n) // as we have to check for blank spaces after every while, this is drawback of using one pointer
