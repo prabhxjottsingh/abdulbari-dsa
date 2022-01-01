@@ -1,0 +1,3 @@
+OPEN HASHING: 
+
+Hash table: Array of pointers to linked list

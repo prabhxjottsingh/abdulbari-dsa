@@ -1,0 +1,28 @@
+Type of a searching technique, which is used to search an element in almost constant time
+
+Linear Search -> O(N)
+Binary Search -> O(log N)
+
+in hashing a global array hsh[N] is declared.
+you know about this method thru luv
+
+Drawback: Space difficulty(a lot of space is required) 
+
+Hash Table: Keys are mapped on hash table
+
+Mapping:
+1. one-one -> function
+2. many-one
+3. many-one -> function
+4. many-many
+
+hash function: hsh(x) = x
+modify hash function
+
+hsh(x) = x % 10;
+
+sometimes COLLISION occurs, when we need to store two values at same location, after applying modulus,
+so to solve this problem we have two mathods:
+
+1. Open hashing  
+2. Closed Hashing
