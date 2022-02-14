@@ -1,0 +1,8 @@
+There are basically two types of tranversing of trees
+
+1. DFS (Depth First Search): This is further divided into 3 types
+    (i) In-Order -> (Left - Root - Right)
+    (ii) Pre-Order -> (Root - Left - Right)
+    (iii) Post - Order -> (Left - Right - Root)
+
+2. BFS (Breadth First Order): This is basically, all the elements present at a particular level in a tree

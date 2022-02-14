@@ -1,0 +1,19 @@
+Heirarchical structure for storing data.
+
+Binary Tree -> A Parent can have atmost 2 children.
+
+Nomenclature
+Root Node, Children, Leaf Node (node without child), Subtree
+
+Ancestors -> Parent or Parents of PArents of a node are ancestors for a node
+
+Full Binary Tree -> Every Node, either have 0 or 2 children
+
+Complete Binary Tree: 1. All levels are completly filled except the last levels
+                      2. Last Level, has all the nodes, as left as possible
+
+Perfect Binary Tree: 1. All leaf nodes are at same levels
+
+Balanced Binary Tree: Height can be atmax (Log N)
+
+Degenrate Tree: Every node has a sequential child
