@@ -1,0 +1,4 @@
+learnt about dp basics, 
+dp = recursion + sotrage
+
+knapsack problems, eiterh choose an element or dont choose it
