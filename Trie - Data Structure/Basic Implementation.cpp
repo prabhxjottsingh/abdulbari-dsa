@@ -1,5 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
 
 struct Node
 {
@@ -15,7 +13,7 @@ struct Node
 
     void puts(char ch, Node *node)
     {
-        links[ch - 'a'] = node;
+        links[ch - 'a'] = new Node();
     }
 
     Node *gets(char ch)
@@ -28,12 +26,11 @@ struct Node
         flag = true;
     }
 
-    void isEnd()
+    bool isEnd()
     {
         return flag;
     }
-
-}
+};
 
 class Trie
 {
@@ -52,12 +49,12 @@ public:
     void insert(string word)
     {
         Node *node = root; // Dummy Variable node which is initially pointing to the root
-        for (auto &char : word)
+        for (auto &ch : word)
         {
             if (!node->containsKey(ch))
                 node->puts(ch, node);
             // now, move to the referrrence trie
-            node->gets(ch);
+            node = node->gets(ch);
         }
         node->setEnd();
     }
@@ -71,12 +68,10 @@ public:
                 return false;
             node = node->gets(ch);
         }
-        if (node->isEnd)
-            return true;
-        return false;
+        return node->isEnd();
     }
 
-    bool startWith(string prefix)
+    bool startsWith(string prefix)
     {
         Node *node = root;
         for (auto &ch : prefix)
@@ -88,7 +83,3 @@ public:
         return true;
     }
 };
-
-int main()
-{
-}
